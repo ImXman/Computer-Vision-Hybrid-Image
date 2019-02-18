@@ -54,6 +54,7 @@ def conv(img,kernal):
     
     smooth_img=np.zeros((n,m,d))
     
+    ##cross correlation
     for k in range(d):
         for i in range(n):
             for j in range(m):
