@@ -38,6 +38,10 @@ def gaussin_kernal(size=(29,29),sigma=7):
 def conv(img,kernal):
     
     n,m,d=img.shape
+    
+    ##rotate kernal 180 degree
+    kernal = np.flip(kernal,axis=1)
+    kernal = np.flip(kernal,axis=0)
     a,b=kernal.shape
     
     pad1 = int((a-1)/2)
